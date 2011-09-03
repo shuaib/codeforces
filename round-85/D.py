@@ -1,11 +1,11 @@
-import math
+from sys import stdin
 
-n = int(raw_input())
-f = [-100000 for i in range(0, 100001)]
+n = int(next(stdin))
+f = [-100000] * 100001
 for j in range(0, n):
-    x, y  = tuple(int(i) for i in raw_input().strip().split(" "))
+    x, y  = [int(i) for i in next(stdin).split()]
     c = 0
-    for i in xrange(1, int(math.sqrt(x)+1)):
+    for i in xrange(1, int(x**0.5)+1):
         if x%i==0:
             q = x/i
             p = i
